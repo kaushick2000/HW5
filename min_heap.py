@@ -15,7 +15,7 @@ class min_heap:
     def right(self, i):
 
         return (i << 1) + 2
-
+   # The ability to initially build the heap
     def build_min_heap(self):
 
         for i in range(self.parent(len(self.heap) - 1), -1, -1):
@@ -51,7 +51,7 @@ class min_heap:
 
         self.heap.append(key)
         self.heapify_up(len(self.heap) - 1)
-
+# The ability to get and remove ("pop") the root node from the heap
     def pop(self):
 
         if len(self.heap) == 0:
@@ -81,6 +81,8 @@ class min_heap:
 
 if __name__ == "__main__":
     data = [12, 3, 10, 1, 8, 5]
+    # The heap should be generic to the type of data 
+    
     # using float values
     # data1=[12.3,3.5,10.4,1.7,8.2,5.6]
     heap = min_heap(data)
